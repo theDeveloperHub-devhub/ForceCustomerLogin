@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="DevHub_ForceCustomerLogin::manage"
+             title="Whitelist"
+             module="DevHub_ForceCustomerLogin"
+             parent="DevHub_ForceCustomerLogin::devhub_force_login_whitelist"
+             sortOrder="10"
+             action="ForceCustomerLogin/Manage"
+             resource="DevHub_ForceCustomerLogin::devhub_force_customer_login_manage"/>
+
+        <add id="DevHub_ForceCustomerLogin::devhub_force_login_whitelist"
+             title="Force Customer Login"
+             module="DevHub_ForceCustomerLogin"
+             sortOrder="100"
+             parent="Magento_Customer::customer"
+             resource="DevHub_ForceCustomerLogin::devhub_force_customer_login_manage"/>
+    </menu>
+</config>
